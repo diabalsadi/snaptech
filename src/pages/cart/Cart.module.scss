@@ -1,0 +1,33 @@
+@import "/src/styles/breakpoints.scss";
+
+.ar {
+    direction: rtl;
+    text-align: right;
+}
+
+.container {
+    align-items: flex-start;
+    column-gap: 32px;
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+
+    @include bp-below(medium) {
+        align-items: center;
+    }
+}
+
+.button {
+    border-radius: 5px;
+    position: absolute;
+    right: 5px;
+
+    @include bp-below(medium) {
+        width: 100px;
+    }
+
+    &.ar {
+        left: 5px;
+        right: unset;
+    }
+}

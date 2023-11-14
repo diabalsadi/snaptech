@@ -1,0 +1,22 @@
+@import "/src/styles/fonts.scss";
+@import "/src/styles/breakpoints.scss";
+
+.title {
+    padding-top: 40px;
+    font: 700 32px/24px $work-sans;
+    text-transform: capitalize;
+}
+
+.categoryGrid {
+    column-gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    row-gap: 60px;
+
+    @include bp-below(small) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

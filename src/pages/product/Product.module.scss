@@ -1,0 +1,36 @@
+@import "/src/styles/fonts.scss";
+@import "/src/styles/breakpoints.scss";
+
+.title {
+    padding-top: 40px;
+    font: 700 32px/24px $work-sans;
+    text-transform: capitalize;
+}
+
+.container {
+    display: flex;
+
+    @include bp-below(medium) {
+        flex-direction: column;
+    }
+}
+
+.img {
+    @include bp-below(medium) {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    margin: auto;
+    max-width: 300px;
+}
+
+.ar {
+    text-align: right;
+    direction: rtl;
+}

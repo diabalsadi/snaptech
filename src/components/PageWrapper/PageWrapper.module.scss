@@ -1,0 +1,9 @@
+@import "../../styles/fonts.scss";
+
+.container {
+    max-width: 1200px;
+    margin: 75px auto;
+    padding: 0 20px;
+    font-family: $roboto;
+    min-height: 100vh;
+}

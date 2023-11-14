@@ -1,0 +1,40 @@
+$breakpoint-mobile: 480px;
+$breakpoint-mobile-small: 375px;
+$breakpoint-tablet-portrait: 768px;
+$breakpoint-tablet-landscape: 1024px;
+
+$breakpoints: (
+    "small": (
+        max-width: $breakpoint-mobile
+    ),
+    "xsmall": (
+        max-width: $breakpoint-mobile-small
+    ),
+    "medium": (
+        max-width: $breakpoint-tablet-portrait
+    ),
+    "large": (
+        max-width: $breakpoint-tablet-landscape
+    )
+);
+
+/**
+ * Responsive breakpoint manager.
+ *
+ * @param {string} $breakpoint - The breakpoint value.
+ * @requires $breakpoints
+*/
+@mixin bp-below($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+
+    @if $raw-query {
+        $query: if(type-of($raw-query) == "string", unquote($raw-query), inspect($raw-query));
+
+        @media #{$query} {
+            @content;
+        }
+    } @else {
+        @error 'No value found for `#{$breakpoint}`. '
+      + 'Please make sure it is defined in `$breakpoints` map.';
+    }
+}

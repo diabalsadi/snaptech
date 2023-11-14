@@ -1,0 +1,33 @@
+@import "../../styles/colors.scss";
+@import "../../styles/fonts.scss";
+@import "../../styles/breakpoints.scss";
+
+.container {
+    z-index: 1;
+}
+
+.image {
+    max-height: 300px;
+    border: 1px solid $black;
+}
+
+.headerText {
+    color: $black;
+    font: 700 22px/16px $rubik;
+    transform: translate(100px, 70px);
+
+    @include bp-below(medium) {
+        transform: translate(50px, 50px);
+        font-size: 16px;
+        line-height: 12px;
+        text-align: left;
+    }
+
+    @include bp-below(small) {
+        transform: translate(10px, 50px);
+    }
+}
+
+.link {
+    text-decoration: none;
+}

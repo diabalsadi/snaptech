@@ -1,0 +1,12 @@
+@import "/src/styles/breakpoints.scss";
+@import "/src/styles/colors.scss";
+
+.row {
+    display: flex;
+    gap: 5%;
+    border: 1px solid $semi-black;
+}
+
+.cell {
+    width: 200px;
+}

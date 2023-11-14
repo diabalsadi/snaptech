@@ -1,0 +1,27 @@
+@import "/src/styles/breakpoints.scss";
+@import "/src/styles/colors.scss";
+.form {
+    margin: 0 auto;
+    max-width: 500px;
+    border: 1px solid $semi-black;
+    height: 500px;
+    padding: 50px;
+    background-color: $creamy ;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.inputContainer {
+    column-gap: 10px;
+    align-items: center;
+    display: flex;
+}
+
+.label {
+    font-weight: 700;
+}
+
+.input {
+    width: auto;
+}

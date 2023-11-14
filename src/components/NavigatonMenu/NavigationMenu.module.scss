@@ -1,0 +1,66 @@
+@import "/src/styles/breakpoints.scss";
+@import "/src/styles/colors.scss";
+@import "/src/styles/fonts.scss";
+
+$nav-menu-width: 280px;
+
+@keyframes open-sidebar {
+    from {
+        transform: translateX(-($nav-menu-width));
+    }
+
+    to {
+        transform: none;
+    }
+}
+
+@keyframes close-sidebar {
+    from {
+        transform: none;
+    }
+
+    to {
+        transform: translateX(-$nav-menu-width);
+    }
+}
+
+.container {
+    animation: close-sidebar 0.2s ease-in both;
+    background-color: $black;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 65px;
+
+    &.opened {
+        animation: open-sidebar 0.2s ease-out both;
+    }
+
+    @include bp-below(medium) {
+        width: 35%;
+    }
+
+    @include bp-below(small) {
+        width: 45%;
+    }
+}
+
+.menuWrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font: 20px/26px $rubik;
+    margin-top: 30px;
+    row-gap: 50px;
+    text-align: center;
+    width: $nav-menu-width;
+
+    @include bp-below(medium) {
+        width: 100%;
+    }
+}
+
+.navLink {
+    color: $white;
+    text-decoration: none;
+}

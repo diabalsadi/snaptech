@@ -1,0 +1,26 @@
+.text {
+    text-align: center;
+}
+
+.container {
+    align-items: center;
+    color: currentColor;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    text-decoration: none;
+}
+
+.description {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    max-width: 250px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.ar {
+    text-align: right;
+    direction: rtl;
+}

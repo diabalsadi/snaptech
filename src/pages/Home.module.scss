@@ -1,0 +1,35 @@
+@import "/src/styles/fonts.scss";
+@import "/src/styles/breakpoints.scss";
+
+.introduction {
+    margin: 32px 0;
+    line-height: 1.6;
+    font-family: $segoe;
+}
+
+.ar {
+    text-align: right;
+    direction: rtl;
+}
+
+.title {
+    margin-top: 100px;
+    font: 700 32px/22px $roboto;
+
+    @include bp-below(small) {
+        font-size: 22px;
+        line-height: 18px;
+    }
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 32px 0;
+
+    @include bp-below(small) {
+        justify-content: center;
+        row-gap: 26px;
+    }
+}

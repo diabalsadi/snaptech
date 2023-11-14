@@ -1,0 +1,32 @@
+@import "/src/styles/breakpoints.scss";
+@import "/src/styles/colors.scss";
+@import "/src/styles/fonts.scss";
+
+.footer {
+    background-color: $black;
+    min-height: 200px;
+    color: $white;
+    padding: 30px;
+}
+
+.date {
+    text-align: center;
+}
+
+.linkContainer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+
+    @include bp-below(small) {
+        flex-direction: column;
+        margin-top: 20px;
+        row-gap: 15px;
+        text-align: center;
+    }
+}
+
+.link {
+    text-decoration: none;
+    color: $white;
+}
