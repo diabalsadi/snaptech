@@ -35,7 +35,7 @@ const Login = () => {
       router.push('/cms/control-content');
     }
       if (user?.uid) {
-        axios.get(`http://localhost:3000/api/get/users/?id=${user.uid}`)
+        axios.get(`https://snaptech.vercel.app/api/get/users/?id=${user.uid}`)
           .then((credentials) => {
             if(credentials.data.result.role) {
               dispatcher(makeItAdmin())

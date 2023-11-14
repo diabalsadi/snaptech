@@ -46,10 +46,10 @@ const Control = ({products, categories}) => {
 };
 
 export async function getServerSideProps ({ locale }) {
-  const categories = (await axios.get('http://localhost:3000/api/get/category'))
+  const categories = (await axios.get('https://snaptech.vercel.app/api/get/category'))
     .data.result
 
-  const products = (await axios.get('http://localhost:3000/api/get/product'))
+  const products = (await axios.get('https://snaptech.vercel.app/api/get/product'))
   .data.result
 
   const translateProducts = await Promise.all(

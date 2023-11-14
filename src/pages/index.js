@@ -34,10 +34,10 @@ export default function Home ({ categories, locale, products }) {
 }
 
 export async function getServerSideProps ({ locale }) {
-  const categories = (await axios.get('http://localhost:3000/api/get/category'))
+  const categories = (await axios.get('https://snaptech.vercel.app/api/get/category'))
     .data.result
 
-  const products = (await axios.get('http://localhost:3000/api/get/product?limit=3'))
+  const products = (await axios.get('https://snaptech.vercel.app/api/get/product?limit=3'))
   .data.result
 
   const translateProducts = await Promise.all(

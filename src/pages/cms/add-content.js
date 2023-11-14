@@ -189,7 +189,7 @@ const AddContent = ({ categories }) => {
 }
 
 export async function getServerSideProps ({ locale }) {
-  const categories = (await axios.get('http://localhost:3000/api/get/category'))
+  const categories = (await axios.get('https://snaptech.vercel.app/api/get/category'))
     .data.result
 
   return {

@@ -28,7 +28,7 @@ export async function getServerSideProps (context) {
   const { locale, params: { slug } } = context
 
   const products = (await axios.get(
-    `http://localhost:3000/api/get/product?category=${slug}`
+    `https://snaptech.vercel.app/api/get/product?category=${slug}`
   )).data.result
 
   const translateProducts = await Promise.all(
